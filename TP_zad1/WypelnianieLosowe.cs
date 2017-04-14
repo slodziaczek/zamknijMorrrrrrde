@@ -13,6 +13,7 @@ namespace TP_zad1
         public static string[] imiona = { "Jan", "Błażej", "Aleksander", "Hiacynt", "Wiktor", "Monika", "Wiktoria", "Genowefa", "Anna", "Martyna" };
         public static string[] nazwiska = { "Nowak", "Pająk", "Stefanowicz", "Musiał" };
         public static string[] tytuly = { "Wojna i Pokój", "Ogniem i Mieczem", "Duma i Uprzedzenie", "Całki i Różniczki" };
+        public static string[] gatunki = { "zubr", "bobr", "kurwa los", "lis", "wilk", "kuna", "kon", "wydra", "ryjowka", "zajac" , "to sa zwierzeta, ktore zyja w Polsce" };
 
         private int numberOfPos = 10;
         public int NumberOfPositions
@@ -28,6 +29,8 @@ namespace TP_zad1
         }
 
         public WypelnianieLosowe() { }
+
+
         public WypelnianieLosowe(int ile)
         {
             NumberOfPositions = ile;
@@ -35,22 +38,25 @@ namespace TP_zad1
 
         public void WypelnijKolekcjeWypozyczen(DataRepository dataRepo)
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
         }
 
         public void WypelnijListeKlientow(DataRepository dataRepo)
         {
-            throw new NotImplementedException();
+            for (int i = 0; i < NumberOfPositions; i++)
+            {
+                dataRepo.stworzKlienta(new Klient(GetRandomString(imiona), GetRandomString(nazwiska),GetRandomString(gatunki),GetRandomString(gatunki)));
+            }
         }
 
         public void WypelnijListeOpisowStanow(DataRepository dataRepo)
         {
-            throw new NotImplementedException();
+           // throw new NotImplementedException();
         }
 
         public void WypelnijSlownikFilmow(DataRepository dataRepo)
         {
-            throw new NotImplementedException();
+          //  throw new NotImplementedException();
         }
     }
 }

@@ -41,6 +41,12 @@ namespace TP_zad1
 
             Console.WriteLine(dataService1.wszystkieDaneString());
 
+            WypelnianieLosowe wl = new WypelnianieLosowe();
+            DataRepository dr2 = new DataRepository(wl);
+
+            DataService dataService2 = new DataService(dr2);
+
+            Console.WriteLine(dataService2.wszystkieDaneString());
 
             Console.ReadKey();
 
