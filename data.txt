@@ -1,0 +1,16 @@
+Klienci:
+dupa;dupa;dupa;dupa;
+cycki;cycki;cycki;cycki;
+KNAGA;KNAGA;KNAGA;KNAGA;
+Filmy:
+dupa;dupa;dupa;
+cycki;cycki;cycki;
+KNAGA;KNAGA;KNAGA;
+Terminy zwrotu:
+kutas1
+kutas2
+kutas3
+Opisy stanow:
+jaja;jaja1;
+jaja;jaja2;
+jaja;jaja3;
