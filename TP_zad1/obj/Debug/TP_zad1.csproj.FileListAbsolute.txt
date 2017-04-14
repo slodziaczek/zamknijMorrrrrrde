@@ -10,3 +10,9 @@ C:\Users\emalgpa\Desktop\zad1_tp\niechRzyjeWolnaPolska\TP_zad1\obj\Debug\TP_zad1
 C:\Users\emalgpa\Desktop\zad1_tp\niechRzyjeWolnaPolska\TP_zad1\bin\Debug\TP_zad1.exe
 C:\Users\emalgpa\Desktop\zad1_tp\niechRzyjeWolnaPolska\TP_zad1\bin\Debug\TP_zad1.pdb
 C:\Users\emalgpa\Desktop\zad1_tp\niechRzyjeWolnaPolska\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe.config
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.exe
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.pdb
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.pdb
+C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache

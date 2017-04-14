@@ -22,11 +22,11 @@ namespace TP_zad1
 
             //DataService dataService = new DataService(dr);
 
-            WypelnianieZPliku wzp = new WypelnianieZPliku();
+            //WypelnianieZPliku wzp = new WypelnianieZPliku();
 
-            DataRepository dr1 = new DataRepository(wzp);
+            //DataRepository dr1 = new DataRepository(wzp);
 
-            DataService dataService1 = new DataService(dr1);
+            //DataService dataService1 = new DataService(dr1);
 
 
             //Console.WriteLine(dataService.wyswietlKolekcjeFilmow(dr.dataContext.filmy));
@@ -39,7 +39,7 @@ namespace TP_zad1
 
             Console.WriteLine("Kocham KOTAŁA");
 
-            Console.WriteLine(dataService1.wszystkieDaneString());
+            //Console.WriteLine(dataService1.wszystkieDaneString());
 
             WypelnianieLosowe wl = new WypelnianieLosowe();
             DataRepository dr2 = new DataRepository(wl);
