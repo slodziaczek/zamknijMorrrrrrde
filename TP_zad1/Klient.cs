@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class Klient
+    public class Klient
     {
         //konstruktor
         private static int numerObiektu = 0;

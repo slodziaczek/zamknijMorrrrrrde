@@ -1,0 +1,9 @@
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.Tests.dll
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.Tests.pdb
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.exe
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.pdb
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.xml
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.csprojResolveAssemblyReference.cache
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.dll
+C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.pdb

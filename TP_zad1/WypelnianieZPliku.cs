@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class WypelnianieZPliku : Interfejs
+   public class WypelnianieZPliku : Interfejs
     {
         public void WypelnijKolekcjeWypozyczen(DataRepository dataRepo)
         {

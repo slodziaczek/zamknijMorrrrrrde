@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class OpisStanu
+    public class OpisStanu
     {
        
         

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class Wypozyczenie
+    public class Wypozyczenie
     {
 
         public Wypozyczenie(Film film, Klient klient, string terminZwrotu)

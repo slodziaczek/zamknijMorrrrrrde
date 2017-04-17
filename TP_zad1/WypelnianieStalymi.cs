@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class WypelnianieStalymi : Interfejs
+   public class WypelnianieStalymi : Interfejs
     {
         public void WypelnijKolekcjeWypozyczen(DataRepository dataRepo)
         {
@@ -26,7 +26,7 @@ namespace TP_zad1
 
         public void WypelnijListeKlientow(DataRepository dataRepo)
         {
-            Klient klient1 = new Klient("chuj", "dupa", "cycki", "cipka");
+            Klient klient1 = new Klient("Emil", "Szczepaniak", "577960967", "emial");
             dataRepo.stworzKlienta(klient1);
             Klient klient2 = new Klient("cos", "tam", "cos", "cos tam");
             dataRepo.stworzKlienta(klient2);

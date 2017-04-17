@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    interface Interfejs
+   public interface Interfejs
     {
         void WypelnijListeKlientow(DataRepository dataRepo);
         void WypelnijSlownikFilmow(DataRepository dataRepo);

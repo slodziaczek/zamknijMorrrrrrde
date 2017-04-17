@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class WypelnianieLosowe : Interfejs
+   public class WypelnianieLosowe : Interfejs
     {
 
         Random radom = new Random();

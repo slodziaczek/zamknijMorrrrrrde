@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class DataService
+   public class DataService
     {
 
         public DataService(DataRepository dataRepo)

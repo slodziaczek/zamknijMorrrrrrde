@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class DataRepository
+    public class DataRepository
     {
         public DataRepository()
         {
@@ -177,10 +177,11 @@ namespace TP_zad1
                 if (film.Value._tytul == fl._tytul)
                 {
                     dataContext.filmy.Remove(film.Key);
-                                    
+                   
                 }
+                
             }
-
+            
             return false;
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace TP_zad1
 {
-    class Film
+    public class Film
     {
        // private static int numerObiektu = 0 ;
         public Film(string tytul, string rezyser, string gatunek)
