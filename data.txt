@@ -11,6 +11,6 @@ kutas1
 kutas2
 kutas3
 Opisy stanow:
-jaja;jaja1;
-jaja;jaja2;
-jaja;jaja3;
+dupa;dupa;dupa;jaja;jaja1;12
+KNAGA;KNAGA;KNAGA;jaja;jaja2;14
+KNAGA;KNAGA;KNAGA;jaja;jaja3;15

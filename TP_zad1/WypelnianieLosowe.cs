@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.Remoting.Lifetime;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -20,10 +21,9 @@ namespace TP_zad1
         public static string[] gatunki = { "zubr", "bobr", "kurwa los", "lis", "wilk", "kuna", "kon", "wydra", "ryjowka", "zajac" , "to sa zwierzeta, ktore zyja w Polsce" };
 
         public static string[] opisyStanow = { "opis1", "opis2", "opis3", "opis4", "opis5" };
-        public static string[] daty = { "14-05-2014" , "27-12-2015" , "04-04-1990" , "02-05-2016" };
+        public static string[] stany = { "14", "27", "4", "12" };
 
 
-        
 
         private int numberOfPos = 10;
         public int NumberOfPositions
@@ -36,6 +36,25 @@ namespace TP_zad1
         {
             int num = radom.Next(tab.Length);
             return tab[num];
+        }
+
+        public string GetRandomDate(string leesOrMore)
+        {
+            if (leesOrMore == "less")
+            {
+                Random rand = new Random();
+                DateTime date = new DateTime(1990, 11, 2);
+                DateTime dataZw = date.AddDays(rand.Next(10, 50));
+                return dataZw.ToString("dd/MM/yyyy");
+            }
+            else if (leesOrMore == "more")
+            {
+                Random rand = new Random();
+                DateTime dateNow = DateTime.Now;
+                DateTime dataZw = dateNow.AddDays(rand.Next(10, 50));
+                return dataZw.ToString("dd/MM/yyyy");
+            }
+            else return "Unknown command";
         }
 
         public WypelnianieLosowe() { }
@@ -51,7 +70,7 @@ namespace TP_zad1
             int j = 0;
             for (int i = 0; i < NumberOfPositions; i++)
             {
-                dataRepo.dodajWypozyczenie(new Wypozyczenie(dataRepo.dataContext.filmy[j+1], dataRepo.dataContext.klienci[j],  GetRandomString(daty)));
+                dataRepo.dodajWypozyczenie(new Wypozyczenie(dataRepo.dataContext.filmy[j+1], dataRepo.dataContext.klienci[j],  GetRandomDate("more")));
                 j++;
             }
         }
@@ -66,9 +85,17 @@ namespace TP_zad1
 
         public void WypelnijListeOpisowStanow(DataRepository dataRepo)
         {
+            List<Film> randomowaListaFilmow=new List<Film>();
+            Random los=new Random();
             for (int i = 0; i < NumberOfPositions; i++)
-            { 
-                dataRepo.dodajStan(new OpisStanu(GetRandomString(opisyStanow), GetRandomString(daty)));              
+            {
+                randomowaListaFilmow.Add(new Film(GetRandomString(tytuly), GetRandomString(rezyserzy), GetRandomString(gatunki)));
+            }
+
+            for (int i = 0; i < NumberOfPositions; i++)
+            {
+                int l = los.Next(NumberOfPositions);
+                dataRepo.dodajStan(new OpisStanu(randomowaListaFilmow[l], GetRandomString(opisyStanow), GetRandomDate("less"), int.Parse(GetRandomString(stany))));              
             }
         }
     

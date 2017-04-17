@@ -65,8 +65,13 @@ namespace TP_zad1
 
             StreamReader sr = new StreamReader("../../../data.txt");
             string stan = "";
+            string tytul;
+            string rezyser;
+            string gatunek;
             string opisFilmu;
             string dataZakupu;
+            int stan1;
+
             while (!sr.EndOfStream)
             {
                 if (sr.ReadLine() == "Opisy stanow:")
@@ -75,10 +80,16 @@ namespace TP_zad1
                     {
                         stan = sr.ReadLine();
                         string[] parts = stan.Split(';');
-                        opisFilmu = parts[0];
-                        dataZakupu = parts[1];
+                        tytul = parts[0];
+                        rezyser = parts[1];
+                        gatunek = parts[2];
+                        opisFilmu = parts[3];
+                        dataZakupu = parts[4];
+                        stan1 = int.Parse(parts[5]);
 
-                        dataRepo.dodajStan(new OpisStanu(opisFilmu, dataZakupu));
+
+                        dataRepo.dodajStan(new OpisStanu(new Film(tytul, rezyser, gatunek), opisFilmu, dataZakupu,
+                            stan1));
                     }
                 }
 

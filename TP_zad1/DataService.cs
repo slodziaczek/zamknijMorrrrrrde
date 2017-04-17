@@ -20,7 +20,6 @@ namespace TP_zad1
 
         private DataRepository _dataRepo;
 
-
         private void zmianaWKolekcji(object s, NotifyCollectionChangedEventArgs zdarzenie)
         {
             if (zdarzenie.Action.Equals(NotifyCollectionChangedAction.Add))
@@ -37,6 +36,28 @@ namespace TP_zad1
                     Console.WriteLine("Wypozyczyenie usuniete" + wypozyczenie.WypiszWypozyczenia());
                 }
             }
+        }
+
+
+        public bool dodajWypozyczenie(Klient klient, OpisStanu opisStanu)
+        {
+            if (opisStanu._stan > 0)
+            {
+                opisStanu._stan--;
+                _dataRepo.dodajWypozyczenie(new Wypozyczenie(opisStanu._film, klient));         
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        public bool usunWypozyczenie(Klient klient, OpisStanu opisStanu)
+        {
+            opisStanu._stan++;
+            _dataRepo.usunWypozecznie(new Wypozyczenie(opisStanu._film, klient));
+            return true;
         }
 
         public string wyswietlKolekcjeFilmow(Dictionary<int, Film> filmy)  // tutaj mozemy przekazywac pofiltrowana kolekcje

@@ -36,20 +36,21 @@ namespace TP_zad1
 
         public void WypelnijListeOpisowStanow(DataRepository dataRepo)
         {
-            OpisStanu opisStanu = new OpisStanu ( "zajebista ksiazka", "o Twojej starej");
+            OpisStanu opisStanu = new OpisStanu ( new Film("Twoja stara", "Twoj stary", "zubr"), "zajebista ksiazka", "o Twojej starej", 12);
             dataRepo.dodajStan(opisStanu);
-            OpisStanu opisStanu2 = new OpisStanu("zajebista ksiazka", "o Twojej starej");
+            OpisStanu opisStanu2 = new OpisStanu(new Film("Twoja stara", "Twoj stary", "zubr"), "zajebista ksiazka",
+                "o Twojej starej", 12);
             dataRepo.dodajStan(opisStanu2);
             // Console.WriteLine("Opis stanu: " + opisStanu.wyswietlOpisStanu());
         }
 
         public void WypelnijSlownikFilmow(DataRepository dataRepo)
         {
-            Film film = new Film("Twoja stara", "Twoj Stary", "zubr");
-            dataRepo.dodajFilm(film);
+            Film opisStanu = new Film("Twoja stara", "Twoj Stary", "zubr");
+            dataRepo.dodajFilm(opisStanu);
             Film film2 = new Film("Twoja stara", "Twoj Stary", "zubr");
             dataRepo.dodajFilm(film2);
-            //  Console.WriteLine("Film: " + film.wyswietlFilmy());
+            //  Console.WriteLine("OpisStanu: " + opisStanu.wyswietlFilmy());
         }
     }
 }

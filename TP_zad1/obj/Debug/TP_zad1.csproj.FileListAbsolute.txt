@@ -16,3 +16,9 @@ C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\obj\Debug
 C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe
 C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.pdb
 C:\Users\Koteł\Desktop\Csharp_gotowce\nasze\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache
+C:\repo\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe.config
+C:\repo\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.exe
+C:\repo\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.pdb
+C:\repo\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache
+C:\repo\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe
+C:\repo\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.pdb

@@ -46,6 +46,8 @@ namespace TP_zad1
 
             DataService dataService2 = new DataService(dr2);
 
+
+
             Console.WriteLine(dataService2.wszystkieDaneString());
 
             Console.ReadKey();
