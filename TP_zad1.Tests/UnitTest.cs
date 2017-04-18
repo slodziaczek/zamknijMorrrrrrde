@@ -3,20 +3,26 @@ using System;
 using System.Dynamic;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
+using System.Diagnostics;
 
 namespace TP_zad1.Tests
 {
     [TestClass]
     public class UnitTest
     {
+
+        
+
         [TestMethod]
-        public void stworzKlienta()
+        public void dodajKlienta()
         {
             DataRepository dr = new DataRepository();
             Klient k = new Klient("Emil", "Szczepaniak", "577960967", "emil.szczepaniak.it@gmail.com");
 
             Assert.IsTrue(dr.stworzKlienta(k));
         }
+        [TestMethod]
         public void dodajFilmTest()
         {
             DataRepository dr = new DataRepository();
@@ -167,53 +173,106 @@ namespace TP_zad1.Tests
 
         }
 
-        [TestMethod()]
-        public void WypelnijKolekcjeWypozyczenTest()
+        [TestMethod]
+        public void filtrowanieKlientowTest()
         {
-           WypelnianieStalymi wypelnianieStalymi = new WypelnianieStalymi();
-
+            WypelnianieStalymi wypelnianieStalymi = new WypelnianieStalymi();
             DataRepository dataRepository = new DataRepository(wypelnianieStalymi);
-
             DataService dataService = new DataService(dataRepository);
-
             List<Klient> klienciList = null;
+
+            klienciList = dataService.filtrowanieKlientow("Nieistniejacy");
+            Assert.IsNull(klienciList);
             klienciList = dataService.filtrowanieKlientow("Szczepaniak");
-            List<Klient> klienciList1 = new List<Klient>();
-            klienciList1.Add(new Klient("Emil", "Szczepaniak", "577960967", "emial"));
+            Assert.IsNotNull(klienciList);
+            Assert.AreEqual("Imie: Emil, nazwisko: Szczepaniak, numer telefonu: 577960967, email: Szczepan\n\n", dataService.wyswietlKolekcjeKlientow(klienciList));
 
-            foreach (var klienci in klienciList)
-            {
-                Assert.AreEqual(klienci, klienciList1[0]);
-                    
-            }
-        
-            
+        }
+        [TestMethod]
+        public void filtrowanieFilmowTest()
+        {
+            // create FillDataRepository data object (inherits from DataInterface)
+            WypelnianieStalymi data = new WypelnianieStalymi();
 
+            // create repository using Dependency Injection pattern (pass FillDataRepository object to DataRepository constructor)
+            DataRepository repository = new DataRepository(data);
+
+            // create a data service
+            DataService ds = new DataService(repository);
+
+            // obtain a new dictionary of filtered books
+
+            Dictionary<int, Film> dic = ds.filtrowanieFilmow("Jonathan Demme");
+
+            // expected value: true
+            Assert.AreEqual("Tytul filmu: Milczenie owiec, rezyser: Jonathan Demme, gatunek: Film kryminalny\n\n", ds.wyswietlKolekcjeFilmow(dic));
 
         }
 
-     
-
-
-        //[TestMethod]
-        //public void getKlienciTest()
+        // [TestMethod]
+        // public void filtrowanieWypozyczenTest()
         //{
+        //    WypelnianieStalymi data = new WypelnianieStalymi();
+        //    DataRepository repository = new DataRepository(data);
         //    DataContext dc = new DataContext();
-        //    DataRepository dr = new DataRepository();
-        //    List<Klient> kl = new List<Klient>();
-        //    Klient klient = new Klient("Emil", "Szczepaniak", "577960967", "emil.szczepaniak.it@gmail.com");
+        //    DataService ds = new DataService(repository);
+        //    DateTime now = DateTime.Now;
 
-        //    dc.klienci.Add(klient);
-        //    kl.Add(klient);
+           
+        //    Film film = new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny");
 
+        //    var dod = ds.dodajWypozyczenie(new Klient("Emil", "Szczepaniak", "577960967", "emil.szczepaniak.it@gmail.com"), new OpisStanu(film, "Opis", now.ToString(), 12));
+        //    var kol = ds.wyswietlKolekcjeWypozyczen(dc.wypozyczenia);
 
-        //    //dc.klienci;
-        //    //dr.getKlienci(); // CO JEST ??????
+        //    var exp =  ds.filtrowanieWypozyczen(now.ToString());
 
+        //   // ObservableCollection<Wypozyczenie> wyp = ds.filtrowanieWypozyczen("");
 
-        //    Assert.AreEqual(dr.getKlienci(),kl);
-
+        //    Assert.AreEqual(exp,kol);
 
         //}
+        [TestMethod]
+        public void EfficiencyTest()
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            // check the time of the static mode
+            stopWatch.Start();
+
+            // create FillDataRepositoryStatic fillData object (inherits from DataInterface)
+            //FillDataRepositoryStatic fillData = new FillDataRepositoryStatic();
+            WypelnianieStalymi wypelnianieStalymi = new WypelnianieStalymi();
+
+            // create a repository using Dependency Injection pattern (pass FillDataRepositoryStatic object to DataRepository constructor)
+            DataRepository repository = new DataRepository(wypelnianieStalymi);
+
+            // create a data service
+            DataService ds = new DataService(repository);
+
+            // elapsed time (ms)
+            stopWatch.Stop();
+            double staticTime = stopWatch.Elapsed.TotalMilliseconds;
+
+            stopWatch.Reset();
+
+            // check the time of the file mode
+            stopWatch.Start();
+
+            // create FillDataRepositoryFile fileData object (inherits from DataInterface)
+            WypelnianieZPliku wypelnianieZPliku = new WypelnianieZPliku();
+            // create a repository using Dependency Injection pattern (pass FillDataRepositoryFile object to DataRepository constructor)
+            DataRepository dr = new DataRepository(wypelnianieZPliku);
+
+            // create a data service 
+            DataService dataService = new DataService(dr);
+
+            // elapsed time (ms)
+            stopWatch.Stop();
+            double fileTime = stopWatch.Elapsed.TotalMilliseconds;
+
+            // expected value: true
+            Assert.IsTrue(fileTime > staticTime);
+
+        }
+    
     }
 }

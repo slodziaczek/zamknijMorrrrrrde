@@ -19,9 +19,9 @@ namespace TP_zad1
         }
 
 
-        public Film _film { get; }
-        public string _opisFilmu { get; }
-        public string _dataZakupu { get; }
+        public Film _film { get; set; }
+        public string _opisFilmu { get; set; }
+        public string _dataZakupu { get; set;  }
         public int _stan { get; set; }
 
 

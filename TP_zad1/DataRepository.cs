@@ -14,7 +14,7 @@ namespace TP_zad1
             dataContext = new DataContext();
         }
 
-        public DataContext dataContext { get; }
+        public DataContext dataContext { get; set; }
 
 
 

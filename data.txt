@@ -1,16 +1,9 @@
 Klienci:
-dupa;dupa;dupa;dupa;
-cycki;cycki;cycki;cycki;
-KNAGA;KNAGA;KNAGA;KNAGA;
+Emil;Szczepaniak;123321123;
+Malgorzata;Patora;111111111;
 Filmy:
-dupa;dupa;dupa;
-cycki;cycki;cycki;
-KNAGA;KNAGA;KNAGA;
+Dobrze sie klamie w milym towarzystwie;rezyser;komedia;
 Terminy zwrotu:
-kutas1
-kutas2
-kutas3
+01/01/2018
 Opisy stanow:
-dupa;dupa;dupa;jaja;jaja1;12
-KNAGA;KNAGA;KNAGA;jaja;jaja2;14
-KNAGA;KNAGA;KNAGA;jaja;jaja3;15
+Dobrze sie klamie w milym towarzystwie;rezyser;komedia;dobry film;ok;12;

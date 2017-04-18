@@ -14,11 +14,11 @@ namespace TP_zad1
         public static string[] imiona = { "Jan", "Błażej", "Aleksander", "Hiacynt", "Wiktor", "Monika", "Wiktoria", "Genowefa", "Martyna" };
         public static string[] nazwiska = { "Nowak", "Pająk", "Stefanowicz", "Musiał" , "Wandochowicz"};
         public static string[] numeryTel = { "545980788", "985734957", "534789067","697421094", "784301043" };
-        public static string[] emaile = { "grubyjacek@gmail.com", "rafalto@onet.pl", "william.bitha@ericsson.com", "michal.rudnicki@ericsson.com" };
+        public static string[] emaile = { "jan@gmail.com", "rafal@onet.pl", "william.bitha@ericsson.com", "michal.rudnicki@ericsson.com" };
 
         public static string[] tytuly = { "Wojna i Pokój", "Ogniem i Mieczem", "Duma i Uprzedzenie", "Całki i Różniczki" };
         public static string[] rezyserzy = { "Jerzy Hoffman", "Jerzy Wajda", "Jim Jarmush", "Akira Kurosawa", "Ingmar Bergman" };
-        public static string[] gatunki = { "zubr", "bobr", "kurwa los", "lis", "wilk", "kuna", "kon", "wydra", "ryjowka", "zajac" , "to sa zwierzeta, ktore zyja w Polsce" };
+        public static string[] gatunki = { "komedia", "dramat", "film sensacyjny", "horror", "dreszczowiec", "komedia romantyczna" };
 
         public static string[] opisyStanow = { "opis1", "opis2", "opis3", "opis4", "opis5" };
         public static string[] stany = { "14", "27", "4", "12" };

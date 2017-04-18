@@ -11,6 +11,8 @@ namespace TP_zad1
         static void Main(string[] args)
         {
 
+
+            
             //DateTime time = DateTime.Now;
             //Console.WriteLine(time.ToString("dd/MM/yyyy"));
             //DateTime chuj = time.AddDays(5);
@@ -22,22 +24,35 @@ namespace TP_zad1
 
             //DataService dataService = new DataService(dr);
 
-            //WypelnianieZPliku wzp = new WypelnianieZPliku();
+            WypelnianieZPliku wzp = new WypelnianieZPliku();
 
-            //DataRepository dr1 = new DataRepository(wzp);
+            DataRepository dr1 = new DataRepository(wzp);
 
-            //DataService dataService1 = new DataService(dr1);
+            DataService dataService1 = new DataService(dr1);
 
+            dataService1.testWydajnosci();
 
             //Console.WriteLine(dataService.wyswietlKolekcjeFilmow(dr.dataContext.filmy));
 
-            //Console.Write(dataService1.wyswietlKolekcjeKlientow(dr1.dataContext.klienci));
+            Console.WriteLine("--------------------Klienci-----------------------");
+            
+            Console.Write(dataService1.wyswietlKolekcjeKlientow(dr1.dataContext.klienci));
+
+            //Console.Write(dataService1.wyswietlKolekcjeFilmow(dr1.dataContext.filmy));
+
+            Console.Write(dataService1.filtrowanieWypozyczen("01/01/2017")); //<-----------------------filtrowanie wypozyczen nie dziala...
+            
+
+            //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
+
+            Console.WriteLine("--------------------------------------------------");
+
 
             //Console.WriteLine(dataService.wyswietlKolekcjeOpisowStanow(dr.dataContext.opisyStanow));
 
             //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
 
-            Console.WriteLine("Kocham KOTAŁA");
+           
 
             //Console.WriteLine(dataService1.wszystkieDaneString());
 
@@ -46,9 +61,11 @@ namespace TP_zad1
 
             DataService dataService2 = new DataService(dr2);
 
-
+            
 
             Console.WriteLine(dataService2.wszystkieDaneString());
+
+            
 
             Console.ReadKey();
 

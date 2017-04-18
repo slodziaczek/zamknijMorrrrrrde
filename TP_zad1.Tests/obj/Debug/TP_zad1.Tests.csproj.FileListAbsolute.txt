@@ -7,3 +7,10 @@ C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\Microsoft.Visual
 C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.csprojResolveAssemblyReference.cache
 C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.dll
 C:\Users\Emil\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.pdb
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.csprojResolveAssemblyReference.cache
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.dll
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.Tests.dll
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.Tests.pdb
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.exe
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\bin\Debug\TP_zad1.pdb
+C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1.Tests\obj\Debug\TP_zad1.Tests.pdb

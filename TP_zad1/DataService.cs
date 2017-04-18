@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Collections.Specialized;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -195,15 +196,15 @@ namespace TP_zad1
 
         public Dictionary<int, Film> filtrowanieFilmow(string rezyserFilmow)
         {
-            Dictionary<int, Film> szykaneFilmy = new Dictionary<int, Film>();
+            Dictionary<int, Film> szukaneFilmy = new Dictionary<int, Film>();
             foreach (KeyValuePair<int,Film> fl  in _dataRepo.dataContext.filmy)
             {
                 if (fl.Value._rezyser == rezyserFilmow)
                 {
-                    szykaneFilmy.Add(fl.Key, fl.Value);
+                    szukaneFilmy.Add(fl.Key, fl.Value);
                 }
             }
-            if (szykaneFilmy.Count != 0) return szykaneFilmy;
+            if (szukaneFilmy.Count != 0) return szukaneFilmy;
             else return null;
         }
 
@@ -246,6 +247,49 @@ namespace TP_zad1
             else return null;
         }
 
+
+        public void testWydajnosci()
+        {
+            Stopwatch stopWatch = new Stopwatch();
+            // check the time of the static mode
+            stopWatch.Start();
+
+            // create FillDataRepositoryStatic fillData object (inherits from DataInterface)
+            WypelnianieStalymi fillData = new WypelnianieStalymi();
+
+            // create a repository using Dependency Injection pattern (pass FillDataRepositoryStatic object to DataRepository constructor)
+            DataRepository repository = new DataRepository(fillData);
+
+            // create a data service
+            DataService ds = new DataService(repository);
+
+            // elapsed time (ms)
+            stopWatch.Stop();
+            double staticTime = stopWatch.Elapsed.TotalMilliseconds;
+
+            stopWatch.Reset();
+
+            // check the time of the file mode
+            stopWatch.Start();
+
+            // create FillDataRepositoryFile fileData object (inherits from DataInterface)
+            WypelnianieZPliku wypelnianieZPliku = new WypelnianieZPliku();
+
+            // create a repository using Dependency Injection pattern (pass FillDataRepositoryFile object to DataRepository constructor)
+            DataRepository dr = new DataRepository(wypelnianieZPliku);
+
+            // create a data service 
+            DataService dataService = new DataService(dr);
+
+            // elapsed time (ms)
+            stopWatch.Stop();
+            double fileTime = stopWatch.Elapsed.TotalMilliseconds;
+
+            // expected value: true
+            Console.WriteLine("Czas wypelniania stalymi wynosi : " + staticTime.ToString());
+            Console.WriteLine("Czas wypelniania z pliku wynosi : " + fileTime.ToString());
+            
+        }
      
 
     }
