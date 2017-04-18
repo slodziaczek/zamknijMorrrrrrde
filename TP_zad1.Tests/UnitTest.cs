@@ -209,28 +209,44 @@ namespace TP_zad1.Tests
 
         }
 
-        // [TestMethod]
-        // public void filtrowanieWypozyczenTest()
-        //{
-        //    WypelnianieStalymi data = new WypelnianieStalymi();
-        //    DataRepository repository = new DataRepository(data);
-        //    DataContext dc = new DataContext();
-        //    DataService ds = new DataService(repository);
-        //    DateTime now = DateTime.Now;
+        [TestMethod]
+        public void filtrowanieWypozyczenZPlikuTest()
+        {
+            WypelnianieZPliku data = new WypelnianieZPliku();
+            DataRepository repository = new DataRepository(data);
+            DataContext dc = new DataContext();
+            DataService ds = new DataService(repository);
+            DateTime now = DateTime.Now;
 
-           
-        //    Film film = new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny");
 
-        //    var dod = ds.dodajWypozyczenie(new Klient("Emil", "Szczepaniak", "577960967", "emil.szczepaniak.it@gmail.com"), new OpisStanu(film, "Opis", now.ToString(), 12));
-        //    var kol = ds.wyswietlKolekcjeWypozyczen(dc.wypozyczenia);
+            Film film = new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny");
 
-        //    var exp =  ds.filtrowanieWypozyczen(now.ToString());
+            
+           String wyp = "01-01-2018";
 
-        //   // ObservableCollection<Wypozyczenie> wyp = ds.filtrowanieWypozyczen("");
+            Assert.AreEqual("Film: Dobrze sie klamie w milym towarzystwie, wypożyczony przez: Szczepaniak, data wypożyczenia: 18.04.2017, termin zwrotu: 01-01-2018\n\n",ds.wyswietlKolekcjeWypozyczen(ds.filtrowanieWypozyczen(wyp)));
 
-        //    Assert.AreEqual(exp,kol);
+        }
+        [TestMethod]
+        public void filtrowanieWypozyczenStalymiTest()
+        {
+            WypelnianieStalymi data = new WypelnianieStalymi();
+            DataRepository repository = new DataRepository(data);
+            DataContext dc = new DataContext();
+            DataService ds = new DataService(repository);
+            DateTime now = DateTime.Now;
 
-        //}
+
+            Film film = new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny");
+
+            
+            string wyp = "01-01-2018";
+
+            ds.dodajWypozyczenie(new Klient("Emil", "Szczepaniak", "577960967", "emil.szczepaniak.it@gmail.com"), new OpisStanu(film, "Opis", now.ToString(), 12),wyp);
+
+            Assert.AreEqual("Film: Milczenie owiec, wypożyczony przez: Szczepaniak, data wypożyczenia: 18.04.2017, termin zwrotu: 01-01-2018\n\n", ds.wyswietlKolekcjeWypozyczen(ds.filtrowanieWypozyczen(wyp)));
+
+        }
         [TestMethod]
         public void EfficiencyTest()
         {

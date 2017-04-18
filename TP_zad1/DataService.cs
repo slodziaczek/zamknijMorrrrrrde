@@ -53,7 +53,19 @@ namespace TP_zad1
                 return false;
             }
         }
-
+        public bool dodajWypozyczenie(Klient klient, OpisStanu opisStanu, string terminZwrotu)
+        {
+            if (opisStanu._stan > 0)
+            {
+                opisStanu._stan--;
+                _dataRepo.dodajWypozyczenie(new Wypozyczenie(opisStanu._film, klient,terminZwrotu));
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
         public bool usunWypozyczenie(Klient klient, OpisStanu opisStanu)
         {
             opisStanu._stan++;
