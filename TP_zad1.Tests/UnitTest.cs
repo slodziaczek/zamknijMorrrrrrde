@@ -11,9 +11,6 @@ namespace TP_zad1.Tests
     [TestClass]
     public class UnitTest
     {
-
-        
-
         [TestMethod]
         public void dodajKlienta()
         {
@@ -284,7 +281,8 @@ namespace TP_zad1.Tests
             // elapsed time (ms)
             stopWatch.Stop();
             double fileTime = stopWatch.Elapsed.TotalMilliseconds;
-
+            System.Diagnostics.Trace.WriteLine("Wypelnianie stalymi: " + staticTime.ToString());
+            System.Diagnostics.Trace.WriteLine("Wypelnianie z pliku: " + fileTime.ToString());
             // expected value: true
             Assert.IsTrue(fileTime > staticTime);
 

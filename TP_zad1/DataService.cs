@@ -246,8 +246,6 @@ namespace TP_zad1
             foreach (Wypozyczenie wypozyczenie in _dataRepo.dataContext.wypozyczenia)
             {
                 if (wypozyczenie._terminZwrotu.Equals(terminZwrotu)) szukaneWypozyczenia.Add(wypozyczenie);
-                Console.WriteLine(wypozyczenie._terminZwrotu);
-                Console.WriteLine(terminZwrotu);
             }
             if (szukaneWypozyczenia.Count != 0) return szukaneWypozyczenia;
             else return null;

@@ -43,9 +43,8 @@ namespace TP_zad1
            //Console.Write(dataService1.wyswietlKolekcjeFilmow(dr1.dataContext.filmy));
 
           
-            Console.Write("cokolwiek");
             // Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
-
+            Console.WriteLine("Wyfiltrowane filmy: ");
             Console.Write(dataService1.wyswietlKolekcjeWypozyczen(dataService1.filtrowanieWypozyczen("01-01-2018"))); //<-----------------------filtrowanie wypozyczen nie dziala...
 
 
