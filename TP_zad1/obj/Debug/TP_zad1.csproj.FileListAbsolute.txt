@@ -34,3 +34,9 @@ C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.pdb
 C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache
 C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe
 C:\Users\a3h61906\Desktop\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.pdb
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe.config
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.exe
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.pdb
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.exe
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\bin\Debug\TP_zad1.pdb
+C:\Users\emalgpa\Desktop\chash_nowe\zamknijMorrrrrrde\TP_zad1\obj\Debug\TP_zad1.csprojResolveAssemblyReference.cache

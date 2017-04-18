@@ -25,8 +25,8 @@ namespace TP_zad1
             DateTime dataZw = loser.AddDays(30);
             _wypozyczonyFilm = film;
             _klient = klient;
-            _dataWypozyczenia= loser.ToString("dd/MM/yyyy");
-            _terminZwrotu = dataZw.ToString("dd/MM/yyyy");
+            _dataWypozyczenia= loser.ToString("dd-MM-yyyy");
+            _terminZwrotu = dataZw.ToString("dd-MM-yyyy");
 
         }
 

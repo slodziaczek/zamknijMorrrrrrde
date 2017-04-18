@@ -1,9 +1,9 @@
 Klienci:
-Emil;Szczepaniak;123321123;
-Malgorzata;Patora;111111111;
+Emil;Szczepaniak;123321123;emil@gmal.com;
+Malgorzata;Patora;111111111;gosia@gmail.com;
 Filmy:
 Dobrze sie klamie w milym towarzystwie;rezyser;komedia;
 Terminy zwrotu:
-01/01/2018
+01-01-2018
 Opisy stanow:
 Dobrze sie klamie w milym towarzystwie;rezyser;komedia;dobry film;ok;12;

@@ -92,12 +92,19 @@ namespace TP_zad1
         public string wyswietlKolekcjeWypozyczen(ObservableCollection<Wypozyczenie> wypozyczenia)
         {
             string spisWypozyczen = "";
-            foreach (Wypozyczenie wypozyczenie in wypozyczenia)
+            if(wypozyczenia!=null)
             {
-                spisWypozyczen += wypozyczenie.WypiszWypozyczenia();
+                foreach (Wypozyczenie wypozyczenie in wypozyczenia)
+                {
+                    spisWypozyczen += wypozyczenie.WypiszWypozyczenia();
+                }
+                spisWypozyczen += "\n";
+                return spisWypozyczen;
             }
-            spisWypozyczen += "\n";
-            return spisWypozyczen;
+            else
+            {
+                return "Pusta kolekcja!!!!";
+            }
         }
 
         public string wyswietlKolekcjeOpisowStanow(Dictionary<int, OpisStanu> opisyStanow) 
@@ -226,7 +233,9 @@ namespace TP_zad1
             ObservableCollection<Wypozyczenie> szukaneWypozyczenia = new ObservableCollection<Wypozyczenie>();
             foreach (Wypozyczenie wypozyczenie in _dataRepo.dataContext.wypozyczenia)
             {
-                if (wypozyczenie._terminZwrotu == terminZwrotu) szukaneWypozyczenia.Add(wypozyczenie);
+                if (wypozyczenie._terminZwrotu.Equals(terminZwrotu)) szukaneWypozyczenia.Add(wypozyczenie);
+                Console.WriteLine(wypozyczenie._terminZwrotu);
+                Console.WriteLine(terminZwrotu);
             }
             if (szukaneWypozyczenia.Count != 0) return szukaneWypozyczenia;
             else return null;

@@ -22,6 +22,11 @@ namespace TP_zad1
                 {
                     while (!lines[i + 1].Contains("Opisy stanow:"))
                     {
+                        var charsToRemove = new string[] { "\r","\n"};
+                        foreach (var c in charsToRemove)
+                        {
+                            lines[i+1] = lines[i+1].Replace(c, string.Empty);
+                        }
                         
                         dataRepo.dodajWypozyczenie(new Wypozyczenie(dataRepo.dataContext.filmy[j + 1], dataRepo.dataContext.klienci[j], lines[i + 1]));
                         i++;

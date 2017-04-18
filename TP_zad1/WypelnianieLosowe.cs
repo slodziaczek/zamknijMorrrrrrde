@@ -19,7 +19,7 @@ namespace TP_zad1
         public static string[] tytuly = { "Wojna i Pokój", "Ogniem i Mieczem", "Duma i Uprzedzenie", "Całki i Różniczki" };
         public static string[] rezyserzy = { "Jerzy Hoffman", "Jerzy Wajda", "Jim Jarmush", "Akira Kurosawa", "Ingmar Bergman" };
         public static string[] gatunki = { "komedia", "dramat", "film sensacyjny", "horror", "dreszczowiec", "komedia romantyczna" };
-
+        
         public static string[] opisyStanow = { "opis1", "opis2", "opis3", "opis4", "opis5" };
         public static string[] stany = { "14", "27", "4", "12" };
 

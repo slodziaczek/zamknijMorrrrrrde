@@ -32,18 +32,22 @@ namespace TP_zad1
 
             dataService1.testWydajnosci();
 
-            //Console.WriteLine(dataService.wyswietlKolekcjeFilmow(dr.dataContext.filmy));
+            Console.WriteLine(dataService1.wszystkieDaneString());
 
-            Console.WriteLine("--------------------Klienci-----------------------");
+          //  Console.WriteLine(dataService.wyswietlKolekcjeFilmow(dr.dataContext.filmy));
+
+           // Console.WriteLine("--------------------Klienci-----------------------");
             
-            Console.Write(dataService1.wyswietlKolekcjeKlientow(dr1.dataContext.klienci));
+           // Console.Write(dataService1.wyswietlKolekcjeKlientow(dr1.dataContext.klienci));
 
-            //Console.Write(dataService1.wyswietlKolekcjeFilmow(dr1.dataContext.filmy));
+           //Console.Write(dataService1.wyswietlKolekcjeFilmow(dr1.dataContext.filmy));
 
-            Console.Write(dataService1.filtrowanieWypozyczen("01/01/2017")); //<-----------------------filtrowanie wypozyczen nie dziala...
-            
+          
+            Console.Write("cokolwiek");
+            // Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
 
-            //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
+            Console.Write(dataService1.wyswietlKolekcjeWypozyczen(dataService1.filtrowanieWypozyczen("01-01-2018"))); //<-----------------------filtrowanie wypozyczen nie dziala...
+
 
             Console.WriteLine("--------------------------------------------------");
 
@@ -56,14 +60,14 @@ namespace TP_zad1
 
             //Console.WriteLine(dataService1.wszystkieDaneString());
 
-            WypelnianieLosowe wl = new WypelnianieLosowe();
-            DataRepository dr2 = new DataRepository(wl);
+            //WypelnianieLosowe wl = new WypelnianieLosowe();
+            //DataRepository dr2 = new DataRepository(wl);
 
-            DataService dataService2 = new DataService(dr2);
+            //DataService dataService2 = new DataService(dr2);
 
             
 
-            Console.WriteLine(dataService2.wszystkieDaneString());
+            //Console.WriteLine(dataService2.wszystkieDaneString());
 
             
 
