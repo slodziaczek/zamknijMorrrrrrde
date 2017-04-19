@@ -3,11 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_zad1
 {
+    [XmlRoot("Wypozyczenie")]
     public class Wypozyczenie
     {
+        public Wypozyczenie()
+        {
+        }
 
         public Wypozyczenie(Film film, Klient klient, string terminZwrotu)
         {
@@ -30,9 +35,13 @@ namespace TP_zad1
 
         }
 
+        [XmlElement("Film")]
         public Film  _wypozyczonyFilm { get; set; }
+        [XmlElement("Klient")]
         public Klient  _klient { get; set; }
+        [XmlElement("Data_wyp")]
         public string _dataWypozyczenia { get; set; }
+        [XmlElement("Data_zw")]
         public string _terminZwrotu { get; set; }
 
         public string WypiszWypozyczenia()

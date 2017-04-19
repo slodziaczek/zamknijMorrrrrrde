@@ -3,13 +3,19 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_zad1
 {
+    [XmlRoot("Klient")]
     public class Klient
     {
         //konstruktor
         private static int numerObiektu = 0;
+
+        public Klient()
+        {
+        }
 
         public Klient(string imie, string nazwisko, string numerTel, string email)
         {
@@ -20,10 +26,13 @@ namespace TP_zad1
             _email = email;
         }
 
-
+        [XmlElement("Imie")]
         public string _imie { get; set; }
+        [XmlElement("Nazwisko")]
         public string _nazwisko { get; set; }
+        [XmlElement("Telefon")]
         public string _numerTel { get; set; }
+        [XmlElement("Mail")]
         public string _email { get; set; }
 
 
