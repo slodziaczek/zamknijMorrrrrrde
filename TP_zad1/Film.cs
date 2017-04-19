@@ -30,6 +30,38 @@ namespace TP_zad1
         [XmlElement("Gatunek")]
         public string _gatunek { get; set; }
 
+        public bool Equals(Film obj)
+        {
+            List<bool> isEqual = new List<bool>();
+            int counter = 0;
+
+            if(this._gatunek==obj._gatunek)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._rezyser == obj._rezyser)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._tytul == obj._tytul)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            foreach (var ise in isEqual)
+            {
+                if (ise == true)
+                    counter++;
+            }
+
+            if (counter == isEqual.Count)
+                return true;
+            else
+                return false;
+        }
+
         public string wyswietlFilmy()
         {
             

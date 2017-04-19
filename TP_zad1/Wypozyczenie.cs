@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Configuration;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Serialization;
@@ -19,7 +20,7 @@ namespace TP_zad1
             DateTime loser = DateTime.Now;
             _wypozyczonyFilm = film;
             _klient = klient;
-            _dataWypozyczenia = loser.ToString("dd/MM/yyyy");
+            _dataWypozyczenia = loser.ToString("dd-MM-yyyy");
             _terminZwrotu = terminZwrotu;
 
         }
@@ -43,6 +44,43 @@ namespace TP_zad1
         public string _dataWypozyczenia { get; set; }
         [XmlElement("Data_zw")]
         public string _terminZwrotu { get; set; }
+
+        public bool Equals(Wypozyczenie obj)
+        {
+            List<bool> isEqual=new List<bool>();
+            int counter = 0;
+
+            if(this._klient.Equals(obj._klient))
+                isEqual.Add(true);
+            else 
+                isEqual.Add(false);
+
+            if (this._wypozyczonyFilm.Equals(obj._wypozyczonyFilm))
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._terminZwrotu == obj._terminZwrotu)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._dataWypozyczenia==obj._dataWypozyczenia)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            foreach (var ise in isEqual)
+            {
+                if (ise == true)
+                    counter++;
+            }
+
+            if (counter == isEqual.Count)
+                return true;
+            else
+                return false;
+        }
 
         public string WypiszWypozyczenia()
         {

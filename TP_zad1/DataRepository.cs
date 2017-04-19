@@ -77,62 +77,58 @@ namespace TP_zad1
 
         public Klient getKlient(Klient k)
         {
-            if (dataContext.klienci.Contains(k))
-            {
                 foreach (Klient klient in dataContext.klienci)
                 {
-                    if (klient == k) return k;
+                    if (klient.Equals(k)) return k;
                 }
-            }
             return null;
         }
 
         public Film getFilm(int ID)
         {
-            if (dataContext.filmy.ContainsKey(ID))
-            {
                 foreach (int id in dataContext.filmy.Keys)
                 {
                     if (id.Equals(ID)) return dataContext.filmy[id];
                 }
-            }
+            
             return null;
         }
 
         public Film getFilm(Film fl)
         {
-            if (dataContext.filmy.ContainsValue(fl))
-            {
                 foreach (Film value in dataContext.filmy.Values)
                 {
-                    if (fl._tytul.Equals(value._tytul)) return value;
+                    if (fl.Equals(value)) return value;
                 }
-            }
+            
+            return null;
+        }
+
+        public OpisStanu getOpisStanu(OpisStanu opisStanu)
+        {
+                foreach (OpisStanu id in dataContext.opisyStanow.Values)
+                {
+                    if (id.Equals(opisStanu)) return id;
+                }
             return null;
         }
 
         public OpisStanu getOpisStanu(int ID)
         {
-            if (dataContext.filmy.ContainsKey(ID))
-            {
                 foreach (int id in dataContext.opisyStanow.Keys)
                 {
                     if (id.Equals(ID)) return dataContext.opisyStanow[id];
                 }
-            }
             return null;
         }
 
 
         public Wypozyczenie getWypozyczenie(Wypozyczenie wyp)
         {
-            if (dataContext.wypozyczenia.Contains(wyp))
-            {
-                foreach (Wypozyczenie wypozyczenie in dataContext.wypozyczenia)
+            foreach (Wypozyczenie wypozyczenie in dataContext.wypozyczenia)
                 {
-                    if (wypozyczenie == wyp) return wyp;
+                    if (wypozyczenie.Equals(wyp)) return wyp;
                 }
-            }
             return null;
         }
 

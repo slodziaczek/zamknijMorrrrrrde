@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Opis_stanu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <Tytul>Milczenie owiec</Tytul>
+    <Rezyser>Jonathan Demme</Rezyser>
+    <Gatunek>Film kryminalny</Gatunek>
+  </Film>
+  <Opis>dobry film</Opis>
+  <Data_zak>opowiada o...</Data_zak>
+  <Stan>12</Stan>
+</Opis_stanu>

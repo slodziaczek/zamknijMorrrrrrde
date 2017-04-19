@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Klient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Imie>Emil</Imie>
+  <Nazwisko>Szczepaniak</Nazwisko>
+  <Telefon>577960967</Telefon>
+  <Mail>Szczepan</Mail>
+</Klient>

@@ -13,28 +13,16 @@ namespace TP_zad1
         static void Main(string[] args)
         {
 
+            WypelnianieStalymi wzp=new WypelnianieStalymi();
 
-            
-            //DateTime time = DateTime.Now;
-            //Console.WriteLine(time.ToString("dd/MM/yyyy"));
-            //DateTime chuj = time.AddDays(5);
-            //Console.WriteLine(chuj.ToString("dd/MM/yyyy"));
-
-
-            //WypelnianieStalymi ws = new WypelnianieStalymi();
-            //DataRepository dr = new DataRepository(ws);
-
-            //DataService dataService = new DataService(dr);
-
-            Program ser=new Program();
-
-            WypelnianieZPliku wzp = new WypelnianieZPliku();
+            //WypelnianieZPliku wzp = new WypelnianieZPliku();
 
             DataRepository dr1 = new DataRepository(wzp);
 
+            DateTime dataWypozyczenia = DateTime.Now;
+            DateTime terminZwrotuData = dataWypozyczenia.AddDays(30);
+            String terminZwrotuString = terminZwrotuData.ToString("dd/MM/yyyy");
             DataService dataService1 = new DataService(dr1);
-
-            dataService1.testWydajnosci();
 
             Console.WriteLine(dataService1.wszystkieDaneString());
 
@@ -67,39 +55,15 @@ namespace TP_zad1
             Console.WriteLine("Stan kolekcji po deserializacji:");
             Console.WriteLine(dataService1.wszystkieDaneString());
 
-
-            //Console.WriteLine(dataService.wyswietlKolekcjeOpisowStanow(dr.dataContext.opisyStanow));
-
-            //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
-
-
-
-            //Console.WriteLine(dataService1.wszystkieDaneString());
-
-            //WypelnianieLosowe wl = new WypelnianieLosowe();
-            //DataRepository dr2 = new DataRepository(wl);
-
-            //DataService dataService2 = new DataService(dr2);
-
-
-
-            //Console.WriteLine(dataService2.wszystkieDaneString());
-
+            Serializacja.saveSingleObjectToXml(dr1.getFilm(new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny")));
+            Serializacja.saveSingleObjectToXml(dr1.getKlient(new Klient("Emil", "Szczepaniak", "577960967", "Szczepan")));
+            Serializacja.saveSingleObjectToXml(dr1.getOpisStanu(new OpisStanu(new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny"), "dobry film", "opowiada o...", 12)));
+            Serializacja.saveSingleObjectToXml(dr1.getWypozyczenie(new Wypozyczenie(new Film("Milczenie owiec", "Jonathan Demme", "Film kryminalny"), new Klient("Emil", "Szczepaniak", "577960967", "Szczepan"), terminZwrotuString)));
 
 
             Console.ReadKey();
 
         }
-        //public void write(DataContext sdata)
-        //{
-        //    DataSerializable dataToSer = new DataSerializable();
-        //    dataToSer.copyFromDataContext(sdata);
-        //    TextWriter tw = new StreamWriter("dataCtxt.xml");
-
-        //    XmlSerializer sr = new XmlSerializer(typeof(DataSerializable));
-        //    sr.Serialize(tw, dataToSer);
-        //    tw.Close();
-        //}
     }
 
 

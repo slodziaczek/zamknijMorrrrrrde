@@ -22,6 +22,43 @@ namespace TP_zad1
             _stan = stan;
         }
 
+        public bool Equals(OpisStanu obj)
+        {
+            List<bool> isEqual = new List<bool>();
+            int counter = 0;
+
+            if (this._film.Equals(obj._film))
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._opisFilmu == obj._opisFilmu)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._dataZakupu == obj._dataZakupu)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            if (this._stan == obj._stan)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            foreach (var ise in isEqual)
+            {
+                if (ise == true)
+                    counter++;
+            }
+
+            if (counter == isEqual.Count)
+                return true;
+            else
+                return false;
+        }
+
         [XmlElement("Film")]
         public Film _film { get; set; }
         [XmlElement("Opis")]

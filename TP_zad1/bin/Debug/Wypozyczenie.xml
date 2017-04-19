@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Wypozyczenie xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Film>
+    <Tytul>Milczenie owiec</Tytul>
+    <Rezyser>Jonathan Demme</Rezyser>
+    <Gatunek>Film kryminalny</Gatunek>
+  </Film>
+  <Klient>
+    <Imie>Emil</Imie>
+    <Nazwisko>Szczepaniak</Nazwisko>
+    <Telefon>577960967</Telefon>
+    <Mail>Szczepan</Mail>
+  </Klient>
+  <Data_wyp>19-04-2017</Data_wyp>
+  <Data_zw>19.05.2017</Data_zw>
+</Wypozyczenie>

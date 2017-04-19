@@ -51,5 +51,38 @@ namespace TP_zad1
 
             return deserialized;
         }
+
+        public static void saveSingleObjectToXml(Film film)
+        {
+            TextWriter tw = new StreamWriter("Film.xml");
+      
+            XmlSerializer sr = new XmlSerializer(typeof(Film));
+            sr.Serialize(tw, film);
+            tw.Close();
+        }
+        public static void saveSingleObjectToXml(Klient klient)
+        {
+            TextWriter tw = new StreamWriter("Klient.xml");
+
+            XmlSerializer sr = new XmlSerializer(typeof(Klient));
+            sr.Serialize(tw, klient);
+            tw.Close();
+        }
+        public static void saveSingleObjectToXml(Wypozyczenie wypozyczenie)
+        {
+            TextWriter tw = new StreamWriter("Wypozyczenie.xml");
+
+            XmlSerializer sr = new XmlSerializer(typeof(Wypozyczenie));
+            sr.Serialize(tw, wypozyczenie);
+            tw.Close();
+        }
+        public static void saveSingleObjectToXml(OpisStanu opisStanu)
+        {
+            TextWriter tw = new StreamWriter("OpisStanu.xml");
+
+            XmlSerializer sr = new XmlSerializer(typeof(OpisStanu));
+            sr.Serialize(tw, opisStanu);
+            tw.Close();
+        }
     }
 }

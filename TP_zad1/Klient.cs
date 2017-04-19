@@ -35,7 +35,39 @@ namespace TP_zad1
         [XmlElement("Mail")]
         public string _email { get; set; }
 
+        public bool Equals(Klient obj)
+        {
+            List<bool> isEqual = new List<bool>();
+            int counter = 0;
 
+            if (this._imie == obj._imie)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+            if (this._nazwisko == obj._nazwisko)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+            if (this._numerTel == obj._numerTel)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+            if (this._email == obj._email)
+                isEqual.Add(true);
+            else
+                isEqual.Add(false);
+
+            foreach (var ise in isEqual)
+            {
+                if (ise == true)
+                    counter++;
+            }
+
+            if (counter == isEqual.Count)
+                return true;
+            else
+                return false;
+        }
 
         public string wyswietlKlienta()
         {
