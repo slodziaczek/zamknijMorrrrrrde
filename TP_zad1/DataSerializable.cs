@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace TP_zad1
 {
-    [XmlRoot("pedał")]
+    [XmlRoot("Biblioteka")]
     public class DataSerializable
     {
         public DataSerializable()
@@ -18,12 +18,13 @@ namespace TP_zad1
             opisyStanow=new List<OpisStanu>();
         }
 
-        [XmlElement("Chuj1")]
+        [XmlElement("Klienci")]
         public List<Klient> klienci;
-        [XmlElement("Chuj2")]
+        [XmlElement("Filmy")]
         public List<Film> filmy;
-        [XmlElement("Chuj3")]
+        [XmlElement("Wypozyczenia")]
         public List<Wypozyczenie> wypozyczenia;
+        [XmlElement("Opisy_stanow")]
         public List<OpisStanu> opisyStanow;
 
         public void copyFromDataContext(DataContext dataCtxt)

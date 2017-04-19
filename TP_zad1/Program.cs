@@ -54,10 +54,20 @@ namespace TP_zad1
 
             Console.WriteLine("--------------------------------------------------");
 
-            DataSerializable dataToSer=new DataSerializable();
-            dataToSer.copyFromDataContext(dr1.dataContext);
 
-            ser.write(dataToSer);
+            Console.WriteLine("Serializacja XML");
+            Serializacja.saveToXml(dr1.dataContext);
+
+
+            Console.WriteLine("Stan kolekcji przed deserializacją:");
+            Console.WriteLine(dataService1.wszystkieDaneString());
+
+            dr1.dataContext = Serializacja.readFromXml();
+
+            Console.WriteLine("Stan kolekcji po deserializacji:");
+            Console.WriteLine(dataService1.wszystkieDaneString());
+
+
             //Console.WriteLine(dataService.wyswietlKolekcjeOpisowStanow(dr.dataContext.opisyStanow));
 
             //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
@@ -80,14 +90,16 @@ namespace TP_zad1
             Console.ReadKey();
 
         }
-        public void write(DataSerializable sdata)
-        {
-            TextWriter tw = new StreamWriter("dataCtxt.xml");
+        //public void write(DataContext sdata)
+        //{
+        //    DataSerializable dataToSer = new DataSerializable();
+        //    dataToSer.copyFromDataContext(sdata);
+        //    TextWriter tw = new StreamWriter("dataCtxt.xml");
 
-            XmlSerializer sr = new XmlSerializer(typeof(DataSerializable));
-            sr.Serialize(tw, sdata);
-            tw.Close();
-        }
+        //    XmlSerializer sr = new XmlSerializer(typeof(DataSerializable));
+        //    sr.Serialize(tw, dataToSer);
+        //    tw.Close();
+        //}
     }
 
 

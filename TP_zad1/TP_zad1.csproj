@@ -54,6 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Klient.cs" />
+    <Compile Include="Serializacja.cs" />
     <Compile Include="WypelnianieLosowe.cs" />
     <Compile Include="WypelnianieStalymi.cs" />
     <Compile Include="WypelnianieZPliku.cs" />
