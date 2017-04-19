@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="DataContext.cs" />
     <Compile Include="DataRepository.cs" />
+    <Compile Include="DataSerializable.cs" />
     <Compile Include="DataService.cs" />
     <Compile Include="Film.cs" />
     <Compile Include="Interfejs.cs" />

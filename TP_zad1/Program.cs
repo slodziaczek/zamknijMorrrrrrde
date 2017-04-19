@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml.Serialization;
 
 namespace TP_zad1
 {
@@ -23,6 +25,8 @@ namespace TP_zad1
             //DataRepository dr = new DataRepository(ws);
 
             //DataService dataService = new DataService(dr);
+
+            Program ser=new Program();
 
             WypelnianieZPliku wzp = new WypelnianieZPliku();
 
@@ -50,12 +54,15 @@ namespace TP_zad1
 
             Console.WriteLine("--------------------------------------------------");
 
+            DataSerializable dataToSer=new DataSerializable();
+            dataToSer.copyFromDataContext(dr1.dataContext);
 
+            ser.write(dataToSer);
             //Console.WriteLine(dataService.wyswietlKolekcjeOpisowStanow(dr.dataContext.opisyStanow));
 
             //Console.WriteLine(dataService1.wyswietlKolekcjeWypozyczen(dr1.dataContext.wypozyczenia));
 
-           
+
 
             //Console.WriteLine(dataService1.wszystkieDaneString());
 
@@ -64,14 +71,24 @@ namespace TP_zad1
 
             //DataService dataService2 = new DataService(dr2);
 
-            
+
 
             //Console.WriteLine(dataService2.wszystkieDaneString());
 
-            
+
 
             Console.ReadKey();
 
         }
+        public void write(DataSerializable sdata)
+        {
+            TextWriter tw = new StreamWriter("dataCtxt.xml");
+
+            XmlSerializer sr = new XmlSerializer(typeof(DataSerializable));
+            sr.Serialize(tw, sdata);
+            tw.Close();
+        }
     }
+
+
 }

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pedał xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Chuj1>
+    <Imie>Emil</Imie>
+    <Nazwisko>Szczepaniak</Nazwisko>
+    <Telefon>123321123</Telefon>
+    <Mail>emil@gmal.com</Mail>
+  </Chuj1>
+  <Chuj1>
+    <Imie>Malgorzata</Imie>
+    <Nazwisko>Patora</Nazwisko>
+    <Telefon>111111111</Telefon>
+    <Mail>gosia@gmail.com</Mail>
+  </Chuj1>
+  <Chuj2>
+    <Tytul>Dobrze sie klamie w milym towarzystwie</Tytul>
+    <Rezyser>rezyser</Rezyser>
+    <Gatunek>komedia</Gatunek>
+  </Chuj2>
+  <Chuj3>
+    <Film>
+      <Tytul>Dobrze sie klamie w milym towarzystwie</Tytul>
+      <Rezyser>rezyser</Rezyser>
+      <Gatunek>komedia</Gatunek>
+    </Film>
+    <Klient>
+      <Imie>Emil</Imie>
+      <Nazwisko>Szczepaniak</Nazwisko>
+      <Telefon>123321123</Telefon>
+      <Mail>emil@gmal.com</Mail>
+    </Klient>
+    <Data_wyp>19.04.2017</Data_wyp>
+    <Data_zw>01-01-2018</Data_zw>
+  </Chuj3>
+  <opisyStanow>
+    <OpisStanu>
+      <Film>
+        <Tytul>Dobrze sie klamie w milym towarzystwie</Tytul>
+        <Rezyser>rezyser</Rezyser>
+        <Gatunek>komedia</Gatunek>
+      </Film>
+      <Opis>dobry film</Opis>
+      <Data_zak>ok</Data_zak>
+      <Stan>12</Stan>
+    </OpisStanu>
+  </opisyStanow>
+</pedał>

@@ -7,7 +7,7 @@ using System.Xml.Serialization;
 
 namespace TP_zad1
 {
-    [XmlRoot("Film")]
+    [XmlRoot("Chuj")]
     public class Film
     {
         public Film()
